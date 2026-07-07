@@ -1,0 +1,19 @@
+# Build
+target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Logs
+*.log
+
+# Config com segredos (senha do banco, chave JWT) — NÃO versionar.
+# Use o application.properties.example como modelo.
+src/main/resources/application.properties
+
+# Imagens enviadas em runtime — não versionar o conteúdo,
+# mas mantém a pasta no repo pelo .gitkeep
+images/*
+!images/.gitkeep
