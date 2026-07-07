@@ -1,0 +1,24 @@
+# ===== MODELO de configuração =====
+# Copie este arquivo para "application.properties" e preencha com os valores reais.
+# O application.properties está no .gitignore para não vazar segredos no GitHub.
+
+# ===== Conexão com o PostgreSQL =====
+spring.datasource.url=jdbc:postgresql://localhost:5432/Barbearia
+spring.datasource.username=SEU_USUARIO
+spring.datasource.password=SUA_SENHA
+
+# Porta da API
+server.port=8080
+
+# Mensagens de erro mais limpas (não expõe stacktrace para o cliente)
+server.error.include-stacktrace=never
+
+# ===== JWT =====
+# Chave secreta para assinar os tokens (HS256 exige no mínimo 256 bits / 32 caracteres).
+jwt.secret=TROQUE_POR_UMA_CHAVE_FORTE_COM_MAIS_DE_32_CARACTERES
+# Tempo de expiração do token em milissegundos (86400000 = 24 horas)
+jwt.expiration=86400000
+
+# ===== Upload de imagens =====
+spring.servlet.multipart.max-file-size=5MB
+spring.servlet.multipart.max-request-size=5MB
